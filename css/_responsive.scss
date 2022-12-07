@@ -1,0 +1,173 @@
+@mixin responsive-design {
+    @media screen and (max-width:1300px) {
+        @keyframes scroll-alert-anim {
+            0% {
+                bottom: 10%;
+            }
+            50% {
+                bottom: 12%;
+            }
+            100% {
+                bottom: 10%;
+            }
+        }
+    }
+
+    @media screen and (max-width:1200px) {
+        #inicio {
+            & .secundario .img {
+                height: 70%;
+            }
+            & .secundario .encuesta .form {
+                & .form__email {
+                    width: 70%;
+                }
+                & .form__boton {
+                    width: 30%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1150px) {
+        #inicio {
+            & .secundario .img {
+                height: 65%;
+            }
+            & .secundario .encuesta .form {
+                & .form__email {
+                    width: 70%;
+                }
+                & .form__boton {
+                    width: 30%;
+                }
+            }
+        }
+        #contacto {
+            .contenido {
+                padding-bottom: 10%;
+            }
+        }
+    }
+    @media screen and (max-width:1050px) {
+        #inicio {
+            & .secundario .img {
+                height: 60%;
+            }
+            & .secundario .encuesta .form {
+                & .form__email {
+                    width: 70%;
+                }
+                & .form__boton {
+                    width: 30%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:990px) {
+        #inicio {
+            & .secundario .img {
+                height: 55%;
+            }
+            & .secundario .encuesta .form {
+                & .form__email {
+                    width: 60%;
+                }
+                & .form__boton {
+                    width: 40%;
+                }
+            }
+        }
+        #contacto {
+            .contenido {
+                padding-bottom: 11%;
+            }
+        }
+    }
+    @media screen and (max-width:900px) {
+        #inicio {
+            & .secundario .img {
+                height: 50%;
+            }
+
+        }
+    }
+    @media screen and (max-width:850px) {
+        #inicio .secundario {
+            flex-direction: column-reverse;
+            gap: 0;
+            justify-content: center;
+            & .encuesta {
+                text-align: center;
+                width: 100%;
+                align-items: center;
+                padding-bottom: 15%;
+            }
+            & .img {
+                width: 100%;
+            }
+        }
+        #proyecto {
+            .contenido {
+                max-height: 70%;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                & .item {
+                    width: 100%;
+                    height: 25%;
+                    margin: 0;
+                    border-radius: inherit;
+                    -webkit-border-radius: inherit;
+                    -moz-border-radius: inherit;
+                    -ms-border-radius: inherit;
+                    -o-border-radius: inherit;
+                    &:hover {
+                        height: 35%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        #contacto {
+            .contenido {
+                padding-bottom: 12%;
+            }
+        }
+    }
+
+    @media screen and (max-width:800px) {
+        #contacto {
+            .contenido {
+                flex-direction: column;
+                justify-content: center;
+                & article:first-child {
+                    width: 100%;
+                    height: 40%;
+                }
+                & article:nth-child(2) {
+                    width: 100%;
+                    height: 60%;
+                }
+                &__form {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    & h2 {
+                        margin: 0;
+                    }
+                    & form {
+                        justify-content: center;
+                        height: 90%;
+                    }
+                    & textarea {
+                        height: 5rem;
+                    }
+                    & button {
+                        height: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

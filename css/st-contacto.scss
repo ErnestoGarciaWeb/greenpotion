@@ -1,0 +1,110 @@
+@use 'variables';
+
+@mixin contenido {
+    .contenido {
+        display: flex;
+        justify-content: space-between;
+        padding: 5%;
+        height: 100vh;
+        padding-bottom: 9%;
+        gap: 20px;
+
+        & article {
+            width: 50%;
+        }
+
+        &__datos {
+            color: #fff;
+
+            & .datos-cont {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+
+                i {
+                    font-size: 2rem;
+                }
+
+                & h3 {
+                    margin-bottom: 2px;
+                }
+                & p {
+                    margin-top: 0;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &__form {
+            background-color: #fff;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            padding: 20px;
+
+            & h2 {
+                font-size: 1.5rem;
+            }
+            & form {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 10px;
+                height: 80%;
+                
+                & input[type="text"], input[type="email"], button {
+                    height: 40px;
+                }
+
+                & input[type="text"], input[type="email"], textarea {
+                    border: none;
+                    border: 2px solid transparent;
+                    border-bottom: 2px solid #11998e;
+                    padding: 5px;
+                }
+
+                & input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+                    animation: form-anim 3s infinite linear;
+                    -webkit-animation: form-anim 3s infinite linear;
+                    outline: none;
+                }
+
+                & textarea {
+                    resize: none;
+                }
+
+                & button {
+                    background-color: variables.$color2;
+                    color: variables.$color1;
+                    border: none;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #11998e;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes form-anim {
+        0% {
+            border: 2px solid #11998e;
+        }
+        50% {
+            border: 2px solid transparent;
+        }
+        100% {
+            border: 2px solid #11998e;
+        }
+    }
+}

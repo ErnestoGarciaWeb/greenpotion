@@ -1,0 +1,155 @@
+@use 'variables';
+
+@mixin contenido {
+    overflow-y: scroll;
+    height: 100vh;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .superior {
+        position: relative;
+        animation:3s aparecer forwards;
+        -webkit-animation:3s aparecer forwards;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10%;
+        height: 100vh;
+        &__titulo {
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+        &__texto {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            background-color: variables.$color2;
+            color: variables.$color1;
+            font-weight: 700;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 7px;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            -ms-border-radius: 7px;
+            -o-border-radius: 7px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .scroll-alert {
+        height: 14rem;
+        position: absolute;
+        z-index: 2000;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+        gap: 45px;
+        flex-direction: column;
+        color: #fff;
+        bottom: 0;
+        left: -3.1%;
+        animation: 1.5s scroll-alert-anim infinite ease-in-out;
+        -webkit-animation: 1.5s scroll-alert-anim infinite ease-in-out;
+        p {
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .icon-angle-double-down {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+@mixin secundario {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 60px 7%;
+    height: 100vh;
+    
+    .encuesta {
+        text-align: start;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        & p {
+            font-size: 2rem;
+        }
+        .form {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 90%;
+            &__email {
+                height: 100%;
+                width: 80%;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            &__boton {
+                height: 100%;
+                width: 20%;
+                background-color: variables.$color2;
+                border: 2px solid variables.$color2;
+                padding: 5px 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                & a {
+                    color: variables.$color1;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 110%;
+                }
+                &:hover {
+                    background-color: transparent;
+                    & > a {
+                        color: variables.$white;
+                    }
+                }
+            }
+        }
+    }
+    .img {
+        margin-top: 60px;
+        height: 75%;
+        width: 50%;
+        margin-left: 50px;
+        & img {
+            height: 100%;
+        }
+    }
+}
+
+@keyframes scroll-alert-anim {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 2%;
+    }
+    100% {
+        bottom: 0;
+    }
+}

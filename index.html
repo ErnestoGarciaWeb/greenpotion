@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&amp;display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="./css/fontello.css">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/estilos.css">
+    
+        <link rel="shortcut icon" href="./img/glass-jar.png" type="image/x-icon">
+
+        <script src="./js/app.js"></script>
+    
+        <title>Green Potion</title>
+    </head>
+<body>
+    
+    <!-- menú -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#inicio" onclick="seleccionar(this)" class="selected">Inicio</a>
+            <a href="#nosotros" onclick="seleccionar(this)">Sobre nosotros</a>
+            <span>
+                <img src="./img/glass-jar.png" alt="">
+            </span>
+            <a href="#proyecto" onclick="seleccionar(this)">Proyecto</a>
+            <a href="#contacto" onclick="seleccionar(this)">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="panel">
+        <div class="contenido bg1">
+            <article class="superior">
+                <h2 class="superior__titulo">Esto es Green Potion</h2>
+                <p class="superior__texto">Nuestra misión es hacer del mundo un mejor lugar para vivir</p>
+                <div class="scroll-alert">
+                    <p>Scroll Down</p>
+                    <i class="icon-angle-double-down"></i>
+                </div>
+            </article>
+            <article class="secundario">
+                <div class="encuesta">
+                    <p>Ayudanos contestando esta encuesta para que podamos mejorar nuestro mundo virtual</p>
+                    <div class="form">
+                        <input type="email" class="form__email" placeholder="Email...">
+                        <button class="form__boton"><a href="https://docs.google.com/forms/d/1wcMth5Rs4pk_5OsnpAez8kWPQE6HF7CEjDfofofP2LU/viewform?pli=1&edit_requested=true" target="_blank">Encuesta</a></button>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="./img/header.svg" alt="mundo ecologico">
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección sobre nosotros -->
+    <section id="nosotros" class="panel">
+        <div class="contenido">
+            <h2>Sobre nosotros</h2>
+            <div class="cont-mov">
+                <div class="overlay"></div>
+                <div class="cont-cards">
+                    <article class="card">
+                        <p class="card__text">Somos una empresa que tiene como objetivo incentivar a las personas a sembrar y cuidad arboles para un futuro más saludable para las nuevas generaciones</p>
+                    </article>
+                    <article class="card">
+                        <p class="card__text">Generamos conciencia a la sociedad del cultivo de sus propios alimentos para generar menos contaminación ambiental</p>
+                    </article>
+                    <article class="card">
+                        <p class="card__text">Motivamos a las personas a implementar su propio huerto en casa, para que disfruten de alimentos frescos y llenos de nutrientes</p>
+                    </article>
+                    <article class="card">
+                        <p class="card__text">Buscamos la reducción de actividades que provocan contaminación ambiental</p>
+                    </article>
+                    <article class="card">
+                        <p class="card__text">Concientizamos a las personas de sustituir el consumo de productos, materiales o componentes dañinos por otros mas amigables con el medio ambiente</p>
+                    </article>
+                    <article class="card">
+                        <p class="card__text">Conocemos y compartimos el valor de plantar un arbol para conseguir un entorno más natural</p>
+                    </article>
+                    <article class="card">
+                        <p class="card__text">Tenemos el objetivo de contectar a las personas con la naturaleza para que tengan la pasion de cuidar, valorar y apreciar todo lo que nos rodea</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección proyecto -->
+    <section id="proyecto" class="panel">
+        <h2 class="proyecto__titulo">Este es nuestro proyecto</h2>
+        <div class="contenido">
+            <div class="item img1">
+                <div class="overlay"></div>
+                <h2 class="item__titulo">Lobby</h2>
+            </div>
+            <div class="item img2">
+                <div class="overlay"></div>
+                <h2 class="item__titulo">Laberinto</h2>
+            </div>
+            <div class="item img3">
+                <div class="overlay"></div>
+                <h2 class="item__titulo">Mundo</h2>
+            </div>
+            <div class="item img4">
+                <div class="overlay"></div>
+                <h2 class="item__titulo">Aventura</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección contacto -->
+    <section id="contacto" class="panel">
+        <div class="contenido">
+            <article class="contenido__datos">
+                <div class="datos-cont">
+                    <div class="datos-cont__icon">
+                        <i class="icon-mail"></i>
+                    </div>
+                    <div class="datos-cont__text">
+                        <h3>Correo</h3>
+                        <p>greenpotionpx@gmail.com</p>
+                    </div>
+                </div>
+                <div class="datos-cont">
+                    <div class="datos-cont__icon">
+                        <i class="icon-phone-outline"></i>
+                    </div>
+                    <div class="datos-cont-text">
+                        <h3>Telefono</h3>
+                        <p>+52 993 118 8801</p>
+                    </div>
+                </div>
+                <div class="datos-cont">
+                    <div class="datos-cont__icon">
+                        <i class="icon-globe"></i>
+                    </div>
+                    <div class="datos-cont-text">
+                        <h3>Sitio web</h3>
+                        <p>www.greenpotion.com</p>
+                    </div>
+                </div>
+            </article>
+            <article class="contenido__form">
+                <h2>Envianos un mensaje</h2>
+                <form>
+                    <input type="email" name="dat-email" id="info-email" placeholder="Email...">
+                    <input type="text" name="dat-nombre" id="info-nombre" placeholder="Nombre...">
+                    <textarea name="dat-mens" id="info-mens" cols="30" rows="10" placeholder="Escribenos tu mensaje..."></textarea>
+                    <button type="button" id="btn-guardar">Enviar</button>
+                </form>
+            </article>
+        </div>
+    </section>
+
+</body>
+</html>

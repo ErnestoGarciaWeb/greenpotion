@@ -1,0 +1,152 @@
+@use 'variables';
+@use 'st-header';
+@use 'st-inicio';
+@use 'st-proyecto';
+@use 'st-contacto';
+@use 'responsive';
+@use 'st-head2';
+
+body {
+    font-family: variables.$font; 
+    background: #11998e;  
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    @include st-header.header;
+}
+
+.selected {
+    background-color: variables.$color1;
+    color: variables.$white;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.panel {
+    width: 100vw;
+    flex-shrink: 0;
+    height: 100vh;
+}
+
+#inicio {
+    color: variables.$white;
+    text-align: center;
+
+    .contenido {
+        @include st-inicio.contenido;
+    }
+
+    .secundario {
+        @include st-inicio.secundario;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        top: 50px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+#nosotros {
+    color: variables.$white;
+    text-align: center;
+
+    .contenido {
+        padding: 5% 20%;
+        height: 100vh;
+        & h2 {
+            font-size: 2rem;
+        }
+        
+        .cont-mov {
+            width: 100%;
+            height: 75%;
+            overflow-y: hidden;
+            position: relative;
+
+            & .overlay {
+                position: absolute;
+                background: linear-gradient(to bottom, #11998e 0 1%, transparent 5% 95%, #11998e 99% 100%);
+                height: 100%;
+                width: 100%;
+                z-index: 500;
+            }
+            
+            & .cont-cards {
+                padding: 10px;
+                width: 100%;
+                position: absolute;
+                animation-name: cards-mov;
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+
+                & .card {
+                    margin-top: 15px;
+                    padding: 10px;
+                    background-color: rgb(255, 255, 255, 0.3);
+                    box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.3);
+                    backdrop-filter: blur(4px);
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                    &__text {
+                        text-align: center;
+                        font-size: 1.3rem;                            
+                    }
+                }
+
+                & .card:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@keyframes cards-mov {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+    10% {
+        top: 0;
+        opacity: 1;
+    }
+    90% {
+        top: -100%;
+        opacity: 1;
+    }
+    100% {
+        top: -100%;
+        opacity: 0;
+    }
+}
+
+#proyecto {
+    @include st-proyecto.pro-est;
+}
+
+#contacto {
+    @include st-contacto.contenido;
+}
+
+@include responsive.responsive-design;

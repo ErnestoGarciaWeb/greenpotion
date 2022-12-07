@@ -1,0 +1,95 @@
+@use 'variables';
+
+@mixin pro-est {
+    color: variables.$white;
+    text-align: center;
+    overflow-y: hidden;
+    .proyecto {
+        &__titulo {
+            font-size: 2rem;
+        }
+    }
+
+    .contenido {
+        max-width: 90%;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        & .img1 {
+            background-image: url(../img/mundo-casa.jpg);
+        }
+        & .img2 {
+            background-image: url(../img/mundo-laberinto.jpg);
+        }
+        & .img3 {
+            background-image: url(../img/mundo-casa-arbol.jpg);
+        }
+        & .img4 {
+            background-image: url(../img/mundo-bosque2.jpg);
+        }
+        & .item {
+            width: 25%;
+            height: 70%;
+            background-size: cover;
+            background-position: center center;
+            margin: 0 10px;
+            transition: .7s;
+            -webkit-transition: .7s;
+            -moz-transition: .7s;
+            -ms-transition: .7s;
+            -o-transition: .7s;
+            position: relative;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+
+            &__titulo {
+                font-size: 1.5rem;
+                position: absolute;
+                bottom: -20%;
+                letter-spacing: 2px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                font-style: 20px;
+                padding: 10px 0;
+                opacity: 0;
+                width: 100%;
+                transition: .3s;
+                -webkit-transition: .3s;
+                -moz-transition: .3s;
+                -ms-transition: .3s;
+                -o-transition: .3s;
+                background-color: rgb(255, 255, 255, 0.3);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(2px);
+            }
+
+            &:hover {
+                width: 90%;
+                & > .item__titulo {
+                    bottom: 0;
+                    opacity: 1;
+                }
+            }
+        }
+
+        & .overlay {
+            position: absolute;
+            background: linear-gradient(to bottom, transparent 80%, rgba(0,0,0,0.7));
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use 'variables';
+
+@mixin header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 500;
+    border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+    padding: 10px 0;
+    width: 93vw;
+    height: 70px;
+    background-color: rgb(255, 255, 255, 0.3);
+    box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    text-align: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 25px;
+        & a {
+            color: variables.$white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 7px;
+            cursor: pointer;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+        & span {
+            height: 100%;
+            & img {
+                height: 50px;
+                background-color: variables.$color1;
+                padding: 5px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            } 
+        }
+    }
+}
